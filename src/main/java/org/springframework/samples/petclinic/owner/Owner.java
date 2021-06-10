@@ -46,6 +46,9 @@ import org.springframework.samples.petclinic.model.Person;
 @Table(name = "owners")
 public class Owner extends Person {
 
+	@Column(name = "age")
+	private Integer age;
+
 	@Column(name = "address")
 	@NotEmpty
 	private String address;
@@ -147,4 +150,11 @@ public class Owner extends Person {
 				.append("telephone", this.telephone).toString();
 	}
 
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
 }
