@@ -48,9 +48,9 @@ import org.springframework.transaction.annotation.Transactional;
  * time between test execution.</li>
  * <li><strong>Dependency Injection</strong> of test fixture instances, meaning that we
  * don't need to perform application context lookups. See the use of
- * {@link Autowired @Autowired} on the <code>{@link
- * ClinicServiceTests#clinicService clinicService}</code> instance variable, which uses
- * autowiring <em>by type</em>.
+ * {@link Autowired @Autowired} on the <code>
+ * {@link ClinicServiceTests #clinicService clinicService}</code> instance variable, which
+ * uses autowiring <em>by type</em>.
  * <li><strong>Transaction management</strong>, meaning each test method is executed in
  * its own transaction, which is automatically rolled back by default. Thus, even if tests
  * insert or otherwise change database state, there is no need for a teardown or cleanup
@@ -108,6 +108,7 @@ class ClinicServiceTests {
 		Owner owner = new Owner();
 		owner.setFirstName("Sam");
 		owner.setLastName("Schultz");
+		owner.setAge(30);
 		owner.setAddress("4, Evans Street");
 		owner.setCity("Wollongong");
 		owner.setTelephone("4444444444");
